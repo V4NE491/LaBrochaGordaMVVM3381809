@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:viewmodels="clr-namespace:LaBrochaGordaMVVM3381809.ViewModels"
+             x:Class="LaBrochaGordaMVVM3381809.MainPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:CotizacionViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        <Label Text="PINTURAS - LA BROCHA GORDA" HorizontalOptions="Center"
+               BackgroundColor="AntiqueWhite" TextColor="black" ></Label>
+        <Label Text="Precio por metro cuadrado:"></Label>
+        <Entry Text="{Binding PrecioPorMetroCuadrado}" Placeholder=""></Entry>
+        <Label Text="Cantidad de metros cuadrados:"></Label>
+        <Entry Text="{Binding MetrosCuadrados, Mode=TwoWay}" Keyboard="Numeric" />
+
+        <Label Text="Presupuesto Final:"></Label>
+        <Entry Placeholder="" Text="{Binding Total}"></Entry>
+
+       
+    </StackLayout>
+
+</ContentPage>
